@@ -1,0 +1,315 @@
+/* =========================================================
+   GLOBAL PAGE & TYPOGRAPHY
+   ========================================================= */
+
+html, body {
+  max-width: 900px;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+  font-size: 16px;
+
+  background: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* nbconvert containers */
+.container, #notebook, .jp-Notebook {
+  background: #121212 !important;
+}
+
+/* =========================================================
+   BODY TEXT
+   ========================================================= */
+
+p, li, blockquote {
+  color: #e0e0e0 !important;
+}
+
+p {
+  margin: 0.85em 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* =========================================================
+   HEADINGS (HIERARCHICAL)
+   ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  font-weight: normal;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 2.3em;
+  margin: 2.8em 0 0.6em;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.65em;
+  margin: 2.3em 0 0.5em;
+}
+
+h3 {
+  font-size: 1.35em;
+  margin: 1.9em 0 0.4em;
+  color: #dddddd !important;
+}
+
+h4 {
+  font-size: 1.15em;
+  margin: 1.6em 0 0.3em;
+  font-weight: bold;
+  color: #cccccc !important;
+}
+
+h5 {
+  font-size: 1.05em;
+  margin: 1.3em 0 0.2em;
+  font-weight: bold;
+  color: #bbbbbb !important;
+}
+
+h6 {
+  font-size: 1em;
+  margin: 1.1em 0 0.2em;
+  font-style: italic;
+  color: #aaaaaa !important;
+}
+
+/* =========================================================
+   IMAGES & FIGURES
+   ========================================================= */
+
+img {
+  display: block;
+  margin: 1.6em auto;
+  max-width: 85%;
+  max-height: 500px;
+  height: auto;
+
+  border-radius: 6px;
+  border: 1px solid #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Caption-style paragraph */
+img + p {
+  text-align: center;
+  font-size: 0.9em;
+  color: #bbbbbb !important;
+  margin-top: -0.9em;
+}
+
+/* =========================================================
+   CODE (BASE)
+   ========================================================= */
+
+pre, code {
+  font-family: "DejaVu Sans Mono", monospace;
+}
+
+pre {
+  background: #1e1e1e !important;
+  color: #e6e6e6;
+  font-size: 0.95em;
+  border-left: 4px solid #555;
+  padding: 0.9em;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+/* Inline code */
+p code, li code {
+  background: #1b1b1b !important;
+  color: #ffcb6b !important;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+
+/* =========================================================
+   SYNTAX HIGHLIGHTING (PYGMENTS – DARK)
+   ========================================================= */
+
+.highlight pre {
+  background: #1e1e1e !important;
+}
+
+.highlight .k,
+.highlight .kt { color: #c792ea !important; }
+
+.highlight .n,
+.highlight .p  { color: #e0e0e0 !important; }
+
+.highlight .s  { color: #ecc48d !important; }
+
+.highlight .mi,
+.highlight .mf { color: #f78c6c !important; }
+
+.highlight .c  {
+  color: #6a9955 !important;
+  font-style: italic;
+}
+
+.highlight .o  { color: #89ddff !important; }
+.highlight .nb,
+.highlight .nf { color: #82aaff !important; }
+.highlight .nc { color: #ffcb6b !important; }
+
+/* =========================================================
+   LISTS & LINKS
+   ========================================================= */
+
+ul, ol {
+  margin-left: 1.4em;
+}
+
+li {
+  margin: 0.4em 0;
+}
+
+a {
+  color: #80cbc4 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   MOBILE DARK MODE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  html, body {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    font-size: 15px;
+  }
+
+  p {
+    text-align: left;
+    hyphens: none;
+  }
+
+  h1 { font-size: 1.9em; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.2em; }
+
+  pre {
+    font-size: 0.85em;
+    padding: 0.8em;
+    white-space: pre;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  img + p {
+    font-size: 0.85em;
+  }
+}
+
+/* =========================================================
+   DESKTOP REFINEMENTS
+   ========================================================= */
+
+@media screen and (min-width: 1200px) {
+
+  html, body {
+    max-width: 900px;
+    font-size: 16.5px;
+  }
+
+  img {
+    max-width: 80%;
+  }
+}
+
+/* =========================================================
+   PRINT — PAGE GEOMETRY & COLOR
+   ========================================================= */
+
+@media print {
+
+  @page {
+    margin: 1.2cm;
+    background: black;
+  }
+
+  html, body {
+    background: #000000 !important;
+    color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  pre {
+    background: #111111 !important;
+    border-left-color: #888;
+  }
+
+  a {
+    color: #ffffff !important;
+    text-decoration: underline;
+  }
+}
+
+/* =========================================================
+   PRINT — SEMANTIC PAGE BREAKS
+   ========================================================= */
+
+@media print {
+
+  /* Chapter level */
+  h1 {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  h1:first-of-type {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Major topics */
+  h2 {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Subsections */
+  h3, h4, h5, h6 {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Keep headings with content */
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Prevent splits */
+  pre, blockquote, img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

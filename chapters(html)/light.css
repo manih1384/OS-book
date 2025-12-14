@@ -1,0 +1,313 @@
+/* =========================================================
+   GLOBAL PAGE & TYPOGRAPHY
+   ========================================================= */
+
+html, body {
+  max-width: 900px;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+  font-size: 16px;
+
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+/* nbconvert containers */
+.container, #notebook, .jp-Notebook {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   BODY TEXT
+   ========================================================= */
+
+p, li, blockquote {
+  color: #111111 !important;
+}
+
+p {
+  margin: 0.85em 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* =========================================================
+   HEADINGS (HIERARCHICAL)
+   ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111111 !important;
+  font-weight: normal;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 2.3em;
+  margin: 2.8em 0 0.6em;
+  border-bottom: 2px solid #dddddd;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.65em;
+  margin: 2.3em 0 0.5em;
+}
+
+h3 {
+  font-size: 1.35em;
+  margin: 1.9em 0 0.4em;
+  color: #333333 !important;
+}
+
+h4 {
+  font-size: 1.15em;
+  margin: 1.6em 0 0.3em;
+  font-weight: bold;
+  color: #444444 !important;
+}
+
+h5 {
+  font-size: 1.05em;
+  margin: 1.3em 0 0.2em;
+  font-weight: bold;
+  color: #555555 !important;
+}
+
+h6 {
+  font-size: 1em;
+  margin: 1.1em 0 0.2em;
+  font-style: italic;
+  color: #666666 !important;
+}
+
+/* =========================================================
+   IMAGES & FIGURES
+   ========================================================= */
+
+img {
+  display: block;
+  margin: 1.6em auto;
+  max-width: 85%;
+  max-height: 500px;
+  height: auto;
+
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Caption-style paragraph */
+img + p {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555555 !important;
+  margin-top: -0.9em;
+}
+
+/* =========================================================
+   CODE (BASE)
+   ========================================================= */
+
+pre, code {
+  font-family: "DejaVu Sans Mono", monospace;
+}
+
+pre {
+  background: #f6f6f6 !important;
+  color: #111111;
+  font-size: 0.95em;
+  border-left: 4px solid #bbbbbb;
+  padding: 0.9em;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+/* Inline code */
+p code, li code {
+  background: #f0f0f0 !important;
+  color: #b03060 !important;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+}
+
+/* =========================================================
+   SYNTAX HIGHLIGHTING (PYGMENTS – LIGHT)
+   ========================================================= */
+
+.highlight pre {
+  background: #f6f6f6 !important;
+}
+
+/* Tokens */
+.highlight .k,
+.highlight .kt { color: #0000aa !important; }
+
+.highlight .n,
+.highlight .p  { color: #111111 !important; }
+
+.highlight .s  { color: #aa5500 !important; }
+
+.highlight .mi,
+.highlight .mf { color: #006699 !important; }
+
+.highlight .c  {
+  color: #008000 !important;
+  font-style: italic;
+}
+
+.highlight .o  { color: #333333 !important; }
+.highlight .nb,
+.highlight .nf { color: #0055aa !important; }
+.highlight .nc { color: #7a3e9d !important; }
+
+/* =========================================================
+   LISTS & LINKS
+   ========================================================= */
+
+ul, ol {
+  margin-left: 1.4em;
+}
+
+li {
+  margin: 0.4em 0;
+}
+
+a {
+  color: #0645ad !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   MOBILE LIGHT MODE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  html, body {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    font-size: 15px;
+  }
+
+  p {
+    text-align: left;
+    hyphens: none;
+  }
+
+  h1 { font-size: 1.9em; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.2em; }
+
+  pre {
+    font-size: 0.85em;
+    padding: 0.8em;
+    white-space: pre;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  img + p {
+    font-size: 0.85em;
+  }
+}
+
+/* =========================================================
+   DESKTOP REFINEMENTS
+   ========================================================= */
+
+@media screen and (min-width: 1200px) {
+
+  html, body {
+    max-width: 900px;
+    font-size: 16.5px;
+  }
+
+  img {
+    max-width: 80%;
+  }
+}
+
+/* =========================================================
+   PRINT — PAGE GEOMETRY & COLOR
+   ========================================================= */
+
+@media print {
+
+  @page {
+    margin: 1.2cm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  pre {
+    background: #f0f0f0 !important;
+    border-left-color: #999999;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+}
+
+/* =========================================================
+   PRINT — SEMANTIC PAGE BREAKS
+   ========================================================= */
+
+@media print {
+
+  /* Chapter level */
+  h1 {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  h1:first-of-type {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Major topics */
+  h2 {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Subsections */
+  h3, h4, h5, h6 {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Keep headings with content */
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Prevent splits */
+  pre, blockquote, img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
