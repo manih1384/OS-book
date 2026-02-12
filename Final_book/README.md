@@ -1,0 +1,1 @@
+You can open the html file here and use ctrl+P to get the pdf.

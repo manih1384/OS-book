@@ -1,0 +1,1 @@
+You can use nbmerge to merge the chapters here and use nbconvert to get the html.
